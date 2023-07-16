@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+@{
+    ViewBag.Title = "Speed Converter";
+}
+
+<h2>Speed Converter</h2>
+
+@using (Html.BeginForm("Convert", "Speed", FormMethod.Post))
+{
+    <label for="speed">Enter speed in m/s:</label>
+    <input type="number" step="0.01" name="speed" required />
+
+    <input type="submit" value="Convert" />
+}
